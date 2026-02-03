@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon – Modern HRM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-brand">Horizon</div>
+        <div class="nav-links">
+            <a href="#overview" class="nav-link active" data-section="overview">Overview</a>
+            <a href="#people" class="nav-link" data-section="people">People</a>
+            <a href="#time" class="nav-link" data-section="time">Time</a>
+            <a href="#requests" class="nav-link" data-section="requests">Requests</a>
+            <a href="#compensation" class="nav-link" data-section="compensation">Compensation</a>
+        </div>
+        <div class="nav-user">
+            <div class="user-avatar">AM</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        
+        <!-- Overview Section -->
+        <section class="content-section active" id="overview">
+            <div class="split-layout">
+                <aside class="context-panel">
+                    <div class="panel-content">
+                        <h3>Today</h3>
+                        <p class="date-display">Tuesday, February 3, 2026</p>
+                        <div class="stat-mini">
+                            <span class="stat-value">47</span>
+                            <span class="stat-label">Team members</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">On leave today</span>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="primary-content">
+                    <div class="welcome-header">
+                        <h1>Good morning, Alex</h1>
+                        <p class="subtitle">Here's what's happening with your team today</p>
+                    </div>
+                    
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon new-joiner"></div>
+                            <div class="activity-details">
+                                <h4>Sarah Chen joined the team</h4>
+                                <p>Engineering · Started today</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon leave-request"></div>
+                            <div class="activity-details">
+                                <h4>Leave request from Marcus Williams</h4>
+                                <p>5 days · Feb 15 - Feb 20</p>
+                                <span class="activity-time">4 hours ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon attendance"></div>
+                            <div class="activity-details">
+                                <h4>Attendance sync completed</h4>
+                                <p>42 check-ins recorded for today</p>
+                                <span class="activity-time">6 hours ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon review"></div>
+                            <div class="activity-details">
+                                <h4>Performance reviews due</h4>
+                                <p>8 reviews pending your approval</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- People Section -->
+        <section class="content-section" id="people">
+            <div class="split-layout">
+                <aside class="context-panel">
+                    <div class="panel-content">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <label>Department</label>
+                            <div class="filter-options">
+                                <button class="filter-pill active">All</button>
+                                <button class="filter-pill">Engineering</button>
+                                <button class="filter-pill">Design</button>
+                                <button class="filter-pill">Marketing</button>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <label>Status</label>
+                            <div class="filter-options">
+                                <button class="filter-pill active">All</button>
+                                <button class="filter-pill">Active</button>
+                                <button class="filter-pill">On Leave</button>
+                            </div>
+                        </div>
+                        <button class="btn-primary" id="addEmployeeBtn">Add Employee</button>
+                    </div>
+                </aside>
+                
+                <div class="primary-content">
+                    <div class="section-header">
+                        <h1>People</h1>
+                        <p class="subtitle">47 team members</p>
+                    </div>
+                    
+                    <div class="employee-list">
+                        <div class="employee-row">
+                            <div class="employee-avatar" style="background: #6366f1;">SC</div>
+                            <div class="employee-info">
+                                <h4>Sarah Chen</h4>
+                                <p>Senior Frontend Engineer</p>
+                            </div>
+                            <span class="status-chip active">Active</span>
+                            <div class="employee-actions">
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Edit</button>
+                            </div>
+                        </div>
+                        
+                        <div class="employee-row">
+                            <div class="employee-avatar" style="background: #ec4899;">MW</div>
+                            <div class="employee-info">
+                                <h4>Marcus Williams</h4>
+                                <p>Product Designer</p>
+                            </div>
+                            <span class="status-chip on-leave">On Leave</span>
+                            <div class="employee-actions">
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Edit</button>
+                            </div>
+                        </div>
+                        
+                        <div class="employee-row">
+                            <div class="employee-avatar" style="background: #f59e0b;">EP</div>
+                            <div class="employee-info">
+                                <h4>Emma Peterson</h4>
+                                <p>Marketing Manager</p>
+                            </div>
+                            <span class="status-chip active">Active</span>
+                            <div class="employee-actions">
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Edit</button>
+                            </div>
+                        </div>
+                        
+                        <div class="employee-row">
+                            <div class="employee-avatar" style="background: #10b981;">JK</div>
+                            <div class="employee-info">
+                                <h4>James Kim</h4>
+                                <p>Backend Engineer</p>
+                            </div>
+                            <span class="status-chip active">Active</span>
+                            <div class="employee-actions">
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Edit</button>
+                            </div>
+                        </div>
+                        
+                        <div class="employee-row">
+                            <div class="employee-avatar" style="background: #8b5cf6;">LD</div>
+                            <div class="employee-info">
+                                <h4>Lisa Davis</h4>
+                                <p>HR Specialist</p>
+                            </div>
+                            <span class="status-chip active">Active</span>
+                            <div class="employee-actions">
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Edit</button>
+                            </div>
+                        </div>
+                        
+                        <div class="employee-row">
+                            <div class="employee-avatar" style="background: #06b6d4;">RJ</div>
+                            <div class="employee-info">
+                                <h4>Robert Johnson</h4>
+                                <p>DevOps Engineer</p>
+                            </div>
+                            <span class="status-chip active">Active</span>
+                            <div class="employee-actions">
+                                <button class="action-btn">View</button>
+                                <button class="action-btn">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Time Section -->
+        <section class="content-section" id="time">
+            <div class="split-layout">
+                <aside class="context-panel">
+                    <div class="panel-content">
+                        <h3>Week View</h3>
+                        <p class="date-display">Jan 27 - Feb 2, 2026</p>
+                        <div class="stat-mini">
+                            <span class="stat-value">94%</span>
+                            <span class="stat-label">Attendance rate</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-value">8.2h</span>
+                            <span class="stat-label">Avg. work hours</span>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="primary-content">
+                    <div class="section-header">
+                        <h1>Time & Attendance</h1>
+                        <p class="subtitle">This week's overview</p>
+                    </div>
+                    
+                    <div class="timeline-list">
+                        <div class="timeline-row">
+                            <div class="timeline-date">
+                                <span class="day">Mon</span>
+                                <span class="date">Feb 3</span>
+                            </div>
+                            <div class="timeline-events">
+                                <div class="time-block checkin">
+                                    <span class="time">09:15 AM</span>
+                                    <span class="label">Check-in</span>
+                                </div>
+                                <div class="time-block checkout">
+                                    <span class="time">06:30 PM</span>
+                                    <span class="label">Check-out</span>
+                                </div>
+                                <div class="time-summary">9h 15m</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-row">
+                            <div class="timeline-date">
+                                <span class="day">Tue</span>
+                                <span class="date">Feb 2</span>
+                            </div>
+                            <div class="timeline-events">
+                                <div class="time-block checkin">
+                                    <span class="time">08:45 AM</span>
+                                    <span class="label">Check-in</span>
+                                </div>
+                                <div class="time-block checkout">
+                                    <span class="time">05:45 PM</span>
+                                    <span class="label">Check-out</span>
+                                </div>
+                                <div class="time-summary">9h 0m</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-row">
+                            <div class="timeline-date">
+                                <span class="day">Wed</span>
+                                <span class="date">Feb 1</span>
+                            </div>
+                            <div class="timeline-events">
+                                <div class="time-block checkin">
+                                    <span class="time">09:00 AM</span>
+                                    <span class="label">Check-in</span>
+                                </div>
+                                <div class="time-block checkout">
+                                    <span class="time">06:15 PM</span>
+                                    <span class="label">Check-out</span>
+                                </div>
+                                <div class="time-summary">9h 15m</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-row">
+                            <div class="timeline-date">
+                                <span class="day">Thu</span>
+                                <span class="date">Jan 31</span>
+                            </div>
+                            <div class="timeline-events">
+                                <div class="time-block checkin">
+                                    <span class="time">09:30 AM</span>
+                                    <span class="label">Check-in</span>
+                                </div>
+                                <div class="time-block checkout">
+                                    <span class="time">06:00 PM</span>
+                                    <span class="label">Check-out</span>
+                                </div>
+                                <div class="time-summary">8h 30m</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-row">
+                            <div class="timeline-date">
+                                <span class="day">Fri</span>
+                                <span class="date">Jan 30</span>
+                            </div>
+                            <div class="timeline-events">
+                                <div class="time-block checkin">
+                                    <span class="time">08:30 AM</span>
+                                    <span class="label">Check-in</span>
+                                </div>
+                                <div class="time-block checkout">
+                                    <span class="time">04:30 PM</span>
+                                    <span class="label">Check-out</span>
+                                </div>
+                                <div class="time-summary">8h 0m</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requests Section -->
+        <section class="content-section" id="requests">
+            <div class="split-layout">
+                <aside class="context-panel">
+                    <div class="panel-content">
+                        <h3>Quick Stats</h3>
+                        <div class="stat-mini">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Pending</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-value">35</span>
+                            <span class="stat-label">Approved this month</span>
+                        </div>
+                        <button class="btn-primary" id="newRequestBtn">New Request</button>
+                    </div>
+                </aside>
+                
+                <div class="primary-content">
+                    <div class="section-header">
+                        <h1>Leave Requests</h1>
+                        <p class="subtitle">Manage team time off</p>
+                    </div>
+                    
+                    <div class="kanban-board">
+                        <div class="kanban-column">
+                            <div class="column-header">
+                                <h3>Pending</h3>
+                                <span class="count">12</span>
+                            </div>
+                            <div class="kanban-cards">
+                                <div class="request-card">
+                                    <div class="card-avatar" style="background: #ec4899;">MW</div>
+                                    <div class="card-content">
+                                        <h4>Marcus Williams</h4>
+                                        <p class="request-dates">Feb 15 - Feb 20 · 5 days</p>
+                                        <span class="request-type">Vacation</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="request-card">
+                                    <div class="card-avatar" style="background: #f59e0b;">EP</div>
+                                    <div class="card-content">
+                                        <h4>Emma Peterson</h4>
+                                        <p class="request-dates">Feb 10 - Feb 11 · 2 days</p>
+                                        <span class="request-type">Sick Leave</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="request-card">
+                                    <div class="card-avatar" style="background: #06b6d4;">RJ</div>
+                                    <div class="card-content">
+                                        <h4>Robert Johnson</h4>
+                                        <p class="request-dates">Feb 8 · 1 day</p>
+                                        <span class="request-type">Personal</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="kanban-column">
+                            <div class="column-header">
+                                <h3>Approved</h3>
+                                <span class="count">8</span>
+                            </div>
+                            <div class="kanban-cards">
+                                <div class="request-card">
+                                    <div class="card-avatar" style="background: #10b981;">JK</div>
+                                    <div class="card-content">
+                                        <h4>James Kim</h4>
+                                        <p class="request-dates">Feb 5 - Feb 7 · 3 days</p>
+                                        <span class="request-type">Vacation</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="request-card">
+                                    <div class="card-avatar" style="background: #8b5cf6;">LD</div>
+                                    <div class="card-content">
+                                        <h4>Lisa Davis</h4>
+                                        <p class="request-dates">Feb 3 · 1 day</p>
+                                        <span class="request-type">Personal</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="kanban-column">
+                            <div class="column-header">
+                                <h3>Rejected</h3>
+                                <span class="count">2</span>
+                            </div>
+                            <div class="kanban-cards">
+                                <div class="request-card">
+                                    <div class="card-avatar" style="background: #6366f1;">SC</div>
+                                    <div class="card-content">
+                                        <h4>Sarah Chen</h4>
+                                        <p class="request-dates">Feb 12 - Feb 14 · 3 days</p>
+                                        <span class="request-type">Vacation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compensation Section -->
+        <section class="content-section" id="compensation">
+            <div class="split-layout">
+                <aside class="context-panel">
+                    <div class="panel-content">
+                        <h3>Overview</h3>
+                        <div class="stat-mini">
+                            <span class="stat-value">$4.2M</span>
+                            <span class="stat-label">Total annual payroll</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-value">$89K</span>
+                            <span class="stat-label">Average salary</span>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="primary-content">
+                    <div class="section-header">
+                        <h1>Compensation</h1>
+                        <p class="subtitle">Salary and benefits overview</p>
+                    </div>
+                    
+                    <div class="compensation-list">
+                        <div class="comp-row">
+                            <div class="comp-employee">
+                                <div class="employee-avatar" style="background: #6366f1;">SC</div>
+                                <div class="employee-info">
+                                    <h4>Sarah Chen</h4>
+                                    <p>Senior Frontend Engineer</p>
+                                </div>
+                            </div>
+                            <div class="comp-details">
+                                <span class="comp-amount">$125,000</span>
+                                <span class="comp-label">Annual</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comp-row">
+                            <div class="comp-employee">
+                                <div class="employee-avatar" style="background: #ec4899;">MW</div>
+                                <div class="employee-info">
+                                    <h4>Marcus Williams</h4>
+                                    <p>Product Designer</p>
+                                </div>
+                            </div>
+                            <div class="comp-details">
+                                <span class="comp-amount">$98,000</span>
+                                <span class="comp-label">Annual</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comp-row">
+                            <div class="comp-employee">
+                                <div class="employee-avatar" style="background: #f59e0b;">EP</div>
+                                <div class="employee-info">
+                                    <h4>Emma Peterson</h4>
+                                    <p>Marketing Manager</p>
+                                </div>
+                            </div>
+                            <div class="comp-details">
+                                <span class="comp-amount">$92,000</span>
+                                <span class="comp-label">Annual</span>
+                            </div>
+                        </div>
+                        
+                        <div class="comp-row">
+                            <div class="comp-employee">
+                                <div class="employee-avatar" style="background: #10b981;">JK</div>
+                                <div class="employee-info">
+                                    <h4>James Kim</h4>
+                                    <p>Backend Engineer</p>
+                                </div>
+                            </div>
+                            <div class="comp-details">
+                                <span class="comp-amount">$118,000</span>
+                                <span class="comp-label">Annual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Slide-in Panel -->
+    <div class="panel-overlay" id="panelOverlay"></div>
+    <div class="slide-panel" id="slidePanel">
+        <div class="panel-header">
+            <h2 id="panelTitle">Add Employee</h2>
+            <button class="close-btn" id="closePanel">×</button>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter full name">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="email@company.com">
+            </div>
+            <div class="form-group">
+                <label>Role</label>
+                <input type="text" placeholder="e.g. Senior Engineer">
+            </div>
+            <div class="form-group">
+                <label>Department</label>
+                <select>
+                    <option>Engineering</option>
+                    <option>Design</option>
+                    <option>Marketing</option>
+                    <option>HR</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button class="btn-secondary" id="cancelPanel">Cancel</button>
+                <button class="btn-primary">Add Employee</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ui.js"></script>
+</body>
+</html>
